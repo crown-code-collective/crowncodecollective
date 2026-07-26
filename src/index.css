@@ -1,0 +1,207 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ==========================================================================
+   CROWN CODE COLLECTIVE — brand system
+   Gold-on-warm-black is the dominant register. Red & green are punctuation
+   only. Texture is mandatory on every section (anti-AI-tell).
+   ========================================================================== */
+
+@theme {
+  /* Foundation — warm black (the stole's true black, not pure #000) */
+  --color-foundation: #0A0A0A;
+  --color-foundation-soft: #141210;
+
+  /* Gold as a RANGE — reads like metal-thread embroidery, never flat */
+  --color-gold-shadow: #9A7B1E;
+  --color-gold: #C9A227;
+  --color-gold-hi: #E8C547;
+
+  /* Pan-African punctuation — deep & earthen, never primary fields */
+  --color-pan-red: #B5232B;
+  --color-pan-green: #1E5631;
+
+  /* Earth supporting */
+  --color-bronze: #7A5C3E;
+  --color-sand: #D8C4A0;
+  --color-cream: #F2E8D5;
+  --color-brown: #3E2C20;
+
+  /* Fonts */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-foundation);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--color-foundation);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display type — ceremonial high-contrast serif, negative tracking */
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.font-display-tight { letter-spacing: -0.03em; }
+
+/* ----- Textures (mandatory, never flat fills) -------------------------- */
+
+/* Film grain — fixed overlay over dark sections */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Page-wide fixed grain for continuity */
+.grain-fixed {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Paper/canvas tooth for cream sections */
+.tooth {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(122,92,62,0.05) 0, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* Soft gold radial glow behind ceremonial moments */
+.gold-glow {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(201,162,39,0.11) 0%, rgba(201,162,39,0.035) 38%, transparent 70%);
+}
+
+/* Hairline gold divider with a center node (helix-derived) */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-shadow) 20%, var(--color-gold) 50%, var(--color-gold-shadow) 80%, transparent);
+}
+
+/* Pan-African accent — red · gold · green (cultural color symbolism) */
+.triband {
+  height: 3px;
+  width: 84px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-pan-red) 0 33.33%,
+    var(--color-gold) 33.33% 66.66%,
+    var(--color-pan-green) 66.66% 100%
+  );
+}
+.triband-line {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    var(--color-pan-red) 12%,
+    var(--color-pan-red) 30%,
+    var(--color-gold) 44%,
+    var(--color-gold) 56%,
+    var(--color-pan-green) 70%,
+    var(--color-pan-green) 88%,
+    transparent 100%
+  );
+  opacity: 0.7;
+}
+
+/* Emblem alive — slow float + breathing gold glow (spline 'object in dark space') */
+@keyframes emblem-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes emblem-glow {
+  0%, 100% { filter: drop-shadow(0 0 14px rgba(201,162,39,0.18)); }
+  50% { filter: drop-shadow(0 0 30px rgba(232,197,71,0.42)); }
+}
+.emblem-alive {
+  animation: emblem-float 7s ease-in-out infinite, emblem-glow 5.5s ease-in-out infinite;
+  will-change: transform, filter;
+}
+@media (prefers-reduced-motion: reduce) {
+  .emblem-alive { animation: none; filter: drop-shadow(0 0 18px rgba(201,162,39,0.25)); }
+}
+
+/* Light-wipe reveal — gold sweep across text on view */
+@keyframes light-wipe {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.text-lightwipe {
+  background: linear-gradient(100deg, var(--color-cream) 0%, var(--color-cream) 35%, var(--color-gold-hi) 50%, var(--color-cream) 65%, var(--color-cream) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: light-wipe 6s ease-in-out infinite;
+}
+.text-lightwipe-gold {
+  background: linear-gradient(100deg, var(--color-gold-shadow) 0%, var(--color-gold) 38%, var(--color-gold-hi) 50%, var(--color-gold) 62%, var(--color-gold-shadow) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: light-wipe 8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .text-lightwipe, .text-lightwipe-gold { animation: none; }
+  .text-lightwipe-gold { color: var(--color-gold); }
+}
+
+/* Selection */
+::selection { background: rgba(201,162,39,0.35); color: var(--color-cream); }
+
+/* Focus ring — accessible, brand-toned */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Form controls */
+.field {
+  width: 100%;
+  background: rgba(242,232,213,0.04);
+  border: 1px solid rgba(201,162,39,0.28);
+  color: var(--color-cream);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 200ms ease, background 200ms ease;
+}
+.field::placeholder { color: rgba(216,196,160,0.45); }
+.field:hover { border-color: rgba(201,162,39,0.5); }
+.field:focus { border-color: var(--color-gold); background: rgba(242,232,213,0.07); outline: none; }
+
+@layer base {
+  * { border-color: rgba(201,162,39,0.18); }
+  button, [role="button"], a[href], label[for], summary { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
