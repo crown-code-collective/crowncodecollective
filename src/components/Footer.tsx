@@ -2,10 +2,12 @@ import { Link } from "../lib/router";
 import Emblem from "./Emblem";
 import GoldDust from "./GoldDust";
 
-/* Real accounts verified live 2026-07-26 (registered under setup@). Facebook and
-   LinkedIn don't exist for CCC — removed rather than left as dead links. */
+/* Real accounts, each loaded in a browser to confirm it exists before listing.
+   Don't add a link here without doing that — a dead link in a nonprofit's
+   footer looks exactly like a working one until someone clicks it. */
 const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/crowncodecollective/" },
+  { label: "Facebook", href: "https://www.facebook.com/crowncodecollective" },
   { label: "TikTok", href: "https://www.tiktok.com/@crowncodecollective" },
 ];
 
