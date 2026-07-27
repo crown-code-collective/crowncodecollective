@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import PingPongVideo from "../components/PingPongVideo";
 import GoldDust from "../components/GoldDust";
-import { Link } from "../lib/router";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -43,36 +42,44 @@ export default function Hero() {
   // Shared copy — only one layout mounts at a time, so reusing the motion
   // children is safe.
   const headline = (
-    <motion.h1
-      variants={rise}
-      className="font-display font-display-tight text-[2rem] leading-[1.08] text-cream sm:text-5xl lg:text-6xl"
-    >
-      We are building community through{" "}
-      <span className="text-gold">recognition, leadership, culture,</span> and educational
-      perseverance.
-    </motion.h1>
+    <>
+      <motion.p
+        variants={rise}
+        className="text-xs uppercase tracking-[0.32em] text-gold"
+      >
+        Crown Code Collective
+      </motion.p>
+      <motion.h1
+        variants={rise}
+        className="font-display font-display-tight mt-5 text-[2rem] leading-[1.08] text-cream sm:text-5xl lg:text-6xl"
+      >
+        Transforming Awareness Into{" "}
+        <span className="text-gold">Intentional Action</span>
+      </motion.h1>
+    </>
   );
   const sub = (
-    <motion.p variants={rise} className="mt-6 max-w-xl text-base leading-relaxed text-sand/85 sm:text-lg">
-      Crown Code Collective honors educational journeys through community recognition,
-      ceremonial experiences, leadership visibility, and cultural connection.
+    <motion.p variants={rise} className="mt-6 max-w-2xl text-base leading-relaxed text-sand/85 sm:text-lg">
+      Crown Code Collective creates practical pathways that help individuals, businesses, leaders,
+      organizations, and communities learn, participate, contribute, and build lasting impact
+      together.
     </motion.p>
   );
   const ctas = (
     <motion.div variants={rise} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-      <Link
-        to="/join"
+      <a
+        href="#our-work"
         className="group relative inline-flex items-center justify-center overflow-hidden bg-gold px-7 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-foundation transition-all duration-300 hover:bg-gold-hi"
       >
-        <span className="relative z-10">Join the Network</span>
+        <span className="relative z-10">Explore Our Work</span>
         <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-      </Link>
-      <Link
-        to="/join"
+      </a>
+      <a
+        href="#participate"
         className="inline-flex items-center justify-center border border-cream/40 px-7 py-3.5 text-sm font-medium uppercase tracking-[0.14em] text-cream transition-all duration-300 hover:border-gold hover:text-gold"
       >
-        BSU Alumni Network
-      </Link>
+        Find Your Path
+      </a>
     </motion.div>
   );
 

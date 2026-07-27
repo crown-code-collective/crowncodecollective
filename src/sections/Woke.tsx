@@ -24,7 +24,7 @@ export default function Woke() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <h2 className="font-poster mt-7 text-6xl text-cream sm:text-8xl">Woke:</h2>
+          <h2 className="font-poster mt-7 text-5xl text-cream sm:text-7xl">W.O.K.E.</h2>
         </Reveal>
 
         <dl className="mt-12 space-y-7">

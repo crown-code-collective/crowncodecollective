@@ -2,13 +2,34 @@ import { Link } from "../lib/router";
 import Emblem from "./Emblem";
 import GoldDust from "./GoldDust";
 
+/* Footer approved 2026-07-26.
+   The old "Recognition · Leadership · Culture · Community" strapline was
+   removed — it competed with C.O.D.E., which is the tagline. */
+
 /* Real accounts, each loaded in a browser to confirm it exists before listing.
    Don't add a link here without doing that — a dead link in a nonprofit's
-   footer looks exactly like a working one until someone clicks it. */
+   footer looks exactly like a working one until someone clicks it.
+   YouTube is included: the channel is public and branded, though it has no
+   videos yet.
+   The PODCAST is deliberately NOT here. The Spotify show is created but
+   unpublished — open.spotify.com/show/033BV6MdHO2E6pkZyJ5aMv returns 404, so
+   it would be a broken link. Add it the day the first episode publishes. */
 const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/crowncodecollective/" },
   { label: "Facebook", href: "https://www.facebook.com/crowncodecollective" },
   { label: "TikTok", href: "https://www.tiktok.com/@crowncodecollective" },
+  { label: "YouTube", href: "https://www.youtube.com/@crowncodecollective" },
+];
+
+const NAV = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/#our-work", label: "Our Work" },
+  { to: "/#programs", label: "Programs" },
+  { to: "/#research", label: "Research" },
+  { to: "/#participate", label: "Participate" },
+  { to: "/join", label: "Partner" },
+  { to: "/join", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -21,18 +42,24 @@ export default function Footer() {
         <p className="mt-6 font-display text-2xl tracking-tight text-cream">
           Crown Code <span className="text-gold">Collective</span>
         </p>
-        <p className="mt-3 text-xs uppercase tracking-[0.32em] text-sand/70">
-          Recognition · Leadership · Culture · Community
+        <p className="mt-3 text-base text-sand/80">
+          Transforming Awareness Into Intentional Action
         </p>
-        <div className="mx-auto mt-6 triband" />
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-          {[
-            { to: "/", label: "Home" },
-            { to: "/about", label: "About" },
-            { to: "/join", label: "Join" },
-          ].map((n) => (
-            <Link key={n.to} to={n.to} className="text-sm uppercase tracking-[0.16em] text-sand/75 transition-colors hover:text-gold">
+        <div className="mx-auto mt-8 triband" />
+
+        <p className="mt-8 font-display text-xl tracking-[0.12em] text-gold">C.O.D.E.</p>
+        <p className="mt-2 text-xs uppercase tracking-[0.28em] text-sand/75">
+          Claim • Observe • Do • Embody
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+          {NAV.map((n) => (
+            <Link
+              key={n.label}
+              to={n.to}
+              className="text-sm uppercase tracking-[0.16em] text-sand/75 transition-colors hover:text-gold"
+            >
               {n.label}
             </Link>
           ))}
@@ -54,7 +81,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-10 text-[0.7rem] tracking-wide text-sand/60">
-          © {new Date().getFullYear()} Crown Code Collective. CVII — for the 107.
+          © {new Date().getFullYear()} Crown Code Collective. All rights reserved.
         </p>
       </div>
     </footer>

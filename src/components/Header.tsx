@@ -2,11 +2,23 @@ import { useEffect, useState } from "react";
 import { Link, useRoute } from "../lib/router";
 import Emblem from "./Emblem";
 
-// "Join" lives as the gold CTA button (desktop + mobile drawer), not as a
-// nav text link — having both was a duplicate pointing to /join.
+/* Approved navigation 2026-07-26: Home, About, Our Work, Programs, Research,
+   Participate, Contact — with "Find Your Path" as the primary button.
+
+   Only Home, About and Join exist as routes. Our Work, Programs, Research and
+   Participate are real homepage sections, so they link to those anchors rather
+   than to pages that do not exist. When a section becomes its own page, change
+   the `to` here.
+
+   Contact points at /join, which is where the working forms are. */
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/#our-work", label: "Our Work" },
+  { to: "/#programs", label: "Programs" },
+  { to: "/#research", label: "Research" },
+  { to: "/#participate", label: "Participate" },
+  { to: "/join", label: "Contact" },
 ];
 
 export default function Header() {
@@ -37,7 +49,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -54,7 +66,7 @@ export default function Header() {
             to="/join"
             className="border border-gold/60 px-5 py-2 text-sm uppercase tracking-[0.16em] text-gold transition-colors duration-200 hover:bg-gold hover:text-foundation"
           >
-            Join the Network
+            Find Your Path
           </Link>
         </nav>
 
@@ -63,7 +75,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
         >
           <span className={`h-px w-6 bg-cream transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-cream transition-opacity duration-200 ${open ? "opacity-0" : ""}`} />
@@ -72,7 +84,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-gold/15 px-5 pb-6 pt-2 md:hidden">
+        <nav className="border-t border-gold/15 px-5 pb-6 pt-2 lg:hidden">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -88,7 +100,7 @@ export default function Header() {
             to="/join"
             className="mt-4 inline-flex w-full items-center justify-center border border-gold/60 px-5 py-3 text-sm uppercase tracking-[0.16em] text-gold transition-colors duration-200 hover:bg-gold hover:text-foundation"
           >
-            Join the Network
+            Find Your Path
           </Link>
         </nav>
       )}

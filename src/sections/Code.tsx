@@ -31,8 +31,8 @@ export default function Code() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-5 text-lg leading-relaxed text-sand/80">
-              How awareness becomes action — and how action becomes practice. Every mission, every
-              program, every page of the work runs on these four steps.
+              Every Crown Code Collective initiative follows the same four-step framework. C.O.D.E.
+              transforms awareness into action and action into lasting practice.
             </p>
           </Reveal>
         </div>
@@ -52,11 +52,8 @@ export default function Code() {
         </div>
 
         <Reveal delay={0.4}>
-          <div className="mx-auto mt-14 triband" />
-        </Reveal>
-        <Reveal delay={0.44}>
-          <p className="mt-8 text-center text-xs uppercase tracking-[0.28em] text-gold/85">
-            One choice at a time · One dollar at a time · One generation at a time
+          <p className="mx-auto mt-14 max-w-2xl text-center text-lg leading-relaxed text-sand/80">
+            Every mission, program, partnership, and community initiative begins here.
           </p>
         </Reveal>
       </div>

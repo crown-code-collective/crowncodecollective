@@ -21,7 +21,7 @@ export default function Declarations() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-display text-3xl leading-[1.14] text-cream sm:text-[2.6rem]">
-              Said plainly, and out loud.
+              Said Plainly. Said Out Loud.
             </h2>
           </Reveal>
         </div>
