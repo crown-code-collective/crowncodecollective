@@ -25,16 +25,9 @@ export default function AboutIntro() {
             </p>
           </Reveal>
           <Reveal delay={0.16}>
-            <p>
-              Our work moves recognition beyond acknowledgment. Recognition builds visibility.
-              Visibility builds trust. Trust creates connection. Connection produces participation.
-              Participation strengthens economic circulation, ownership, and legacy.
-            </p>
+            <p>Our work moves recognition beyond acknowledgment.</p>
           </Reveal>
           <Reveal delay={0.2}>
-            <p>We do not simply celebrate what Black communities have built.</p>
-          </Reveal>
-          <Reveal delay={0.24}>
             <p className="font-display text-2xl text-gold">
               We create the infrastructure to help build what comes next.
             </p>
