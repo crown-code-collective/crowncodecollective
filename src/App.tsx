@@ -1,4 +1,3 @@
-import "@fontsource-variable/geist/index.css";
 import { RouterProvider, useRoute } from "./lib/router";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

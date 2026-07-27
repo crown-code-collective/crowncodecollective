@@ -27,9 +27,14 @@
   --color-cream: #F2E8D5;
   --color-brown: #3E2C20;
 
-  /* Fonts */
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-body: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  /* Fonts — the Build Back Black journal system, so the site and the
+     printed/digital products read as one organization.
+       Cormorant Garamond = titles and display   (journal --f-title)
+       Cinzel             = formal headings/labels (journal --f-heading)
+       Lora               = body                  (journal --f-body) */
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-heading: "Cinzel", ui-serif, Georgia, serif;
+  --font-body: "Lora", ui-serif, Georgia, serif;
 }
 
 html {
@@ -49,14 +54,26 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Display type — ceremonial high-contrast serif, negative tracking */
+/* Display type — Cormorant Garamond. A lighter, higher-contrast face than
+   the one it replaced, so it carries more weight and slightly less negative
+   tracking at large sizes. */
 .font-display {
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  letter-spacing: -0.02em;
-  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-weight: 600;
 }
-.font-display-tight { letter-spacing: -0.03em; }
+.font-display-tight { letter-spacing: -0.02em; }
+
+/* Small uppercase labels — Cinzel, the journal's formal heading face. Roman
+   inscriptional caps; needs open tracking or it sets far too tight. */
+.text-xs.uppercase,
+.text-\[0\.7rem\].uppercase,
+[class*="tracking-[0.3"],
+[class*="tracking-[0.32"],
+[class*="tracking-[0.34"] {
+  font-family: var(--font-heading);
+}
 
 /* ----- Textures (mandatory, never flat fills) -------------------------- */
 
