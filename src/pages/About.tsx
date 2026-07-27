@@ -104,14 +104,15 @@ export default function About() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="pt-6 font-display text-3xl text-cream">BSU is the mission. The HBCU is the vision.</h2>
+            <h2 className="pt-6 font-display text-3xl text-cream">Where recognition begins.</h2>
           </Reveal>
           <Reveal delay={0.12}>
             <p>
-              It begins in a Black Student Union — a graduating senior who deserves to be recognized
-              now, where they are. It points toward the HBCU — the fuller inheritance, the 107, the
-              place the lineage was built to reach. We work the whole span: we honor the walk in
-              front of us, and we keep the vision the 107 set in front of all of us.
+              One of those practices begins in a Black Student Union — a graduating senior who
+              deserves to be recognized now, where they are. It points toward the HBCU: the fuller
+              inheritance, the 107, the place the lineage was built to reach. It is one part of the
+              work, not the whole of it — we honor the walk in front of us while building the
+              systems that carry people further than any single walk can.
             </p>
           </Reveal>
           <Reveal delay={0.14}>
