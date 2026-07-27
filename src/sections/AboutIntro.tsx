@@ -27,11 +27,6 @@ export default function AboutIntro() {
           <Reveal delay={0.16}>
             <p>Our work moves recognition beyond acknowledgment.</p>
           </Reveal>
-          <Reveal delay={0.2}>
-            <p className="font-display text-2xl text-gold">
-              We create the infrastructure to help build what comes next.
-            </p>
-          </Reveal>
         </div>
       </div>
     </section>
