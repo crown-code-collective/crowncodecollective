@@ -6,7 +6,8 @@ import Code from "../sections/Code";
 import Pillars from "../sections/Pillars";
 import JoinPaths from "../sections/JoinPaths";
 import Horizon from "../sections/Horizon";
-import ReservedGallery from "../sections/ReservedGallery";
+import Woke from "../sections/Woke";
+import Declarations from "../sections/Declarations";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <Pillars />
       <JoinPaths />
       <Horizon />
-      <ReservedGallery />
+      <Woke />
+      <Declarations />
     </>
   );
 }

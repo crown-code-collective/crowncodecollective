@@ -224,7 +224,7 @@ URL shows it.
 2. Enter `crowncodecollective.com`.
 3. Netlify will ask whether to use **Netlify DNS** (it may call it "delegate to
    Netlify" or offer to change nameservers). **Choose the other option** — the
-   one about pointing existing DNS, sometimes labelled "Add domain" or "I'll
+   one about pointing existing DNS, sometimes labeled "Add domain" or "I'll
    manage DNS elsewhere."
 
 > 🔴 This is the email-safety step. Netlify DNS would move the whole domain to

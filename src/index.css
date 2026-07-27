@@ -35,6 +35,10 @@
   --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-heading: "Cinzel", ui-serif, Georgia, serif;
   --font-body: "Lora", ui-serif, Georgia, serif;
+  /* Poster voice — the declarations and WOKE. Deliberately NOT the serif
+     system: these came from the merch/statement graphics and the contrast
+     between the ceremonial serif and this heavy condensed face is the point. */
+  --font-poster: "Anton", "Arial Black", Impact, sans-serif;
 }
 
 html {
@@ -64,6 +68,16 @@ body {
   font-weight: 600;
 }
 .font-display-tight { letter-spacing: -0.02em; }
+
+/* Poster type — heavy condensed, set tight and uppercase like the merch
+   graphics it comes from. */
+.font-poster {
+  font-family: var(--font-poster);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
 
 /* Small uppercase labels — Cinzel, the journal's formal heading face. Roman
    inscriptional caps; needs open tracking or it sets far too tight. */

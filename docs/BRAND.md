@@ -23,7 +23,7 @@ All of it is defined in `src/index.css`.
 
 The gold range is three values, not one. That's what makes the gold read as
 metal catching light instead of a flat yellow. Replacing the three with one
-colour is the fastest way to make the site look cheap.
+color is the fastest way to make the site look cheap.
 
 Red and green are used sparingly on purpose. Widened into large areas they stop
 reading as heritage and start reading as decoration.

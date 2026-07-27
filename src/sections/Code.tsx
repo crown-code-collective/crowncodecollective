@@ -32,7 +32,7 @@ export default function Code() {
           <Reveal delay={0.12}>
             <p className="mt-5 text-lg leading-relaxed text-sand/80">
               How awareness becomes action — and how action becomes practice. Every mission, every
-              programme, every page of the work runs on these four steps.
+              program, every page of the work runs on these four steps.
             </p>
           </Reveal>
         </div>
