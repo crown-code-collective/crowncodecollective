@@ -1,9 +1,11 @@
-import Reveal from "../components/Reveal";
+﻿import Reveal from "../components/Reveal";
+import { Link } from "../lib/router";
 
 /* Featured initiatives. Copy approved 2026-07-26 (final) — verbatim.
-   LINKS: none of these has its own page yet. Every button points at
-   #participate so nothing is a dead link. When a program page exists, change
-   the href here — that is the only edit needed. */
+   LINKS: as of 2026-07-28 every one of these points at the Area of Work
+   that actually explains it, instead of all six dumping the reader at
+   #participate. Each destination page carries an honest status on the
+   initiative, so a button no longer promises more than exists. */
 const PROGRAMS = [
   {
     title: "BLACKOUT",
@@ -11,6 +13,7 @@ const PROGRAMS = [
       "A coordinated participation mission that helps individuals and communities examine habits, redirect attention, and take intentional action together.",
     ],
     cta: "Learn About BLACKOUT",
+    href: "/work/missions",
   },
   {
     title: "Build Back Black",
@@ -19,6 +22,7 @@ const PROGRAMS = [
       "This is not another lesson about becoming more financially literate inside a system built to lock us out. It is an audit. The Build Back Black Journal and Digital Companion are where we stop, look honestly at our participation, and begin redirecting so we can exhale.",
     ],
     cta: "Explore Build Back Black",
+    href: "/work/economics",
   },
   {
     title: "Crown Score & Crown Verified",
@@ -26,6 +30,7 @@ const PROGRAMS = [
       "Programs that help businesses demonstrate trust, participation, visibility, and community commitment through a structured evaluation process.",
     ],
     cta: "Learn More",
+    href: "/work/business",
   },
   {
     title: "Crown Code Collective Business Directory",
@@ -33,6 +38,7 @@ const PROGRAMS = [
       "A searchable directory connecting communities with participating businesses while encouraging stronger local economic support.",
     ],
     cta: "Explore the Directory",
+    href: "/work/business",
   },
   {
     title: "Founding Builder Program",
@@ -40,6 +46,7 @@ const PROGRAMS = [
       "An opportunity for early businesses and supporters to help establish the long-term foundation of Crown Code Collective.",
     ],
     cta: "Become a Founding Builder",
+    href: "/work/business",
   },
   {
     title: "Media, Podcast, Research & Reports",
@@ -47,6 +54,7 @@ const PROGRAMS = [
       "Stories, interviews, educational content, research, and public reports that document community participation and encourage continued learning.",
     ],
     cta: "Explore Media",
+    href: "/work/education-media",
   },
 ];
 
@@ -88,12 +96,12 @@ export default function Programs() {
                     </p>
                   ))}
                 </div>
-                <a
-                  href="#participate"
+                <Link
+                  to={p.href}
                   className="mt-7 inline-flex items-center border border-gold/45 px-6 py-3 text-xs font-medium uppercase tracking-[0.16em] text-gold transition-all duration-300 hover:border-gold hover:bg-gold hover:text-foundation"
                 >
                   {p.cta}
-                </a>
+                </Link>
               </article>
             </Reveal>
           ))}
