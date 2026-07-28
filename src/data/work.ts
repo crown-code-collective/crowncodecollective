@@ -297,7 +297,7 @@ export const WORK_AREAS: WorkArea[] = [
       {
         name: "Grant Initiatives",
         status: "planned",
-        body: "Crown Code Collective is a 501(c)(3) nonprofit organization. Grant-funded initiatives will be listed here as they are secured, along with what they funded.",
+        body: "Crown Code Collective is a 501(c)(3) nonprofit organization, EIN 39-4418635. Grant-funded initiatives will be listed here as they are secured, along with what they funded.",
       },
     ],
     forWhom: [

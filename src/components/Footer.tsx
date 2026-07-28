@@ -17,8 +17,10 @@ import GoldDust from "./GoldDust";
 /* Stripe donation link, live 2026-07-27. Donor names the amount ($5 min,
    $50 preset) and Stripe carries the 501(c)(3) and "no goods or services"
    substantiation text donors need for their own returns.
-   The EIN is deliberately NOT in this file — it belongs in the footer copy
-   and on the Stripe page, but only once Natasha has confirmed the number. */
+   EIN 39-4418635, confirmed by Natasha 2026-07-28. A 501(c)(3)'s EIN is
+   public by law — it is on the Form 990 and in the IRS Tax Exempt
+   Organization Search — and donors need it for matching gifts, grants and
+   donor-advised funds. It belongs here. */
 const DONATE_URL = "https://donate.stripe.com/8x200i0MG1nH7C34qN8Zq01";
 
 const SOCIALS = [
@@ -98,7 +100,7 @@ export default function Footer() {
 
         <p className="mt-5 max-w-md text-[0.7rem] leading-relaxed tracking-wide text-sand/60">
           Crown Code Collective is a 501(c)(3) nonprofit organization. Gifts are
-          tax-deductible to the extent allowed by law.
+          tax-deductible to the extent allowed by law. EIN 39-4418635.
         </p>
 
         <p className="mt-6 text-[0.7rem] tracking-wide text-sand/60">
