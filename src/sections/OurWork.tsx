@@ -1,4 +1,10 @@
 import Reveal from "../components/Reveal";
+import { Link } from "../lib/router";
+import { WORK_AREAS } from "../data/work";
+
+/* The cards below stay verbatim. Each one now links to its full page at
+   /work/<slug>; the slugs come from data/work.ts in the same order, so if
+   an area is ever added or reordered, change both files together. */
 
 /* Six Areas of Work. Copy approved 2026-07-26 (final) — verbatim, do not reword.
    Recognition appears here as ONE of six areas, which is the agreed framing:
@@ -105,6 +111,14 @@ export default function OurWork() {
                     {a.title}
                   </h3>
                   <p className="mt-5 text-base leading-relaxed text-sand/80">{a.body}</p>
+                  {WORK_AREAS[i] && (
+                    <Link
+                      to={`/work/${WORK_AREAS[i].slug}`}
+                      className="mt-6 inline-block text-xs uppercase tracking-[0.2em] text-gold transition-colors hover:text-cream"
+                    >
+                      Explore this area →
+                    </Link>
+                  )}
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-gold/75">Includes</p>
