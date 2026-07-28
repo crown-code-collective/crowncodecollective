@@ -17,7 +17,7 @@ export default function AboutIntro() {
         <div className="mt-10 max-w-2xl space-y-6 text-lg leading-relaxed text-sand/85">
           <Reveal delay={0.12}>
             <p>
-              Crown Code Collective is a nonprofit organization that transforms awareness into
+              Crown Code Collective is a 501(c)(3) nonprofit organization that transforms awareness into
               intentional action. Through education, recognition, research, media, missions, and
               community engagement, we create practical, visible, measurable, and repeatable
               pathways for individuals, businesses, leaders, and institutions to connect,

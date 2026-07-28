@@ -14,6 +14,13 @@ import GoldDust from "./GoldDust";
    The PODCAST is deliberately NOT here. The Spotify show is created but
    unpublished — open.spotify.com/show/033BV6MdHO2E6pkZyJ5aMv returns 404, so
    it would be a broken link. Add it the day the first episode publishes. */
+/* Stripe donation link, live 2026-07-27. Donor names the amount ($5 min,
+   $50 preset) and Stripe carries the 501(c)(3) and "no goods or services"
+   substantiation text donors need for their own returns.
+   The EIN is deliberately NOT in this file — it belongs in the footer copy
+   and on the Stripe page, but only once Natasha has confirmed the number. */
+const DONATE_URL = "https://donate.stripe.com/8x200i0MG1nH7C34qN8Zq01";
+
 const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/crowncodecollective/" },
   { label: "Facebook", href: "https://www.facebook.com/crowncodecollective" },
@@ -80,7 +87,21 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="mt-10 text-[0.7rem] tracking-wide text-sand/60">
+        <a
+          href={DONATE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-9 inline-block border border-gold/40 px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-gold transition-colors hover:bg-gold hover:text-foundation"
+        >
+          Give to the Mission
+        </a>
+
+        <p className="mt-5 max-w-md text-[0.7rem] leading-relaxed tracking-wide text-sand/60">
+          Crown Code Collective is a 501(c)(3) nonprofit organization. Gifts are
+          tax-deductible to the extent allowed by law.
+        </p>
+
+        <p className="mt-6 text-[0.7rem] tracking-wide text-sand/60">
           © {new Date().getFullYear()} Crown Code Collective. All rights reserved.
         </p>
       </div>

@@ -24,7 +24,7 @@ const PATHS = [
   },
   {
     title: "Supporters",
-    body: "Support the work through partnerships, sponsorships, volunteering, advocacy, or financial contributions.",
+    body: "Support the work through partnerships, sponsorships, volunteering, advocacy, or a tax-deductible gift. Crown Code Collective is a 501(c)(3) nonprofit organization.",
     cta: "Support the Mission",
     href: "/join#supporters",
   },

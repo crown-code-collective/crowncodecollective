@@ -15,8 +15,8 @@ const PROGRAMS = [
   {
     title: "Build Back Black",
     body: [
-      "An economic participation initiative that helps individuals and communities strengthen economic awareness through consistent action and measurable practice.",
-      "The Build Back Black Journal and Digital Companion provide guided tools for reflection, business discovery, community economic circulation, and long-term participation.",
+      "An opportunity to stop participating in our own neglect. We begin with economics because our money is one of the clearest ways to see our participation — where it goes, who benefits from it, what it sustains, and how little of it returns to care for Black people.",
+      "This is not another lesson about becoming more financially literate inside a system built to lock us out. It is an audit. The Build Back Black Journal and Digital Companion are where we stop, look honestly at our participation, and begin redirecting so we can exhale.",
     ],
     cta: "Explore Build Back Black",
   },
